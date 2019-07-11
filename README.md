@@ -1,5 +1,10 @@
 ***** NOTE: The password for the .zip downloads are all "password"! *****
 
+# bypass ids
+
+PHDays的IDS Bypass竞赛：writeup和解决方案
+> https://xz.aliyun.com/t/5576#toc-3
+
 # Introduction
 
 Welcome to dnscat2, a DNS tunnel that WON'T make you sick and kill you!

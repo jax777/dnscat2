@@ -228,7 +228,7 @@ class DriverDNS
     # Append domain, if needed
     if(type_info[:requires_domain])
       if(domain.nil?)
-        response = (response == "" ? "dnscat" : ("dnscat." + response))
+        response = (response == "" ? "dnsCat" : ("dnsCat." + response))
       else
         response = (response == "" ? domain : (response + "." + domain))
       end
