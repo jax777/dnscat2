@@ -5,6 +5,9 @@
 PHDays的IDS Bypass竞赛：writeup和解决方案
 > https://xz.aliyun.com/t/5576#toc-3
 
+修改过程完整记录
+> https://jax777.win/2019/07/13/dnscat-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/
+
 # Introduction
 
 Welcome to dnscat2, a DNS tunnel that WON'T make you sick and kill you!
