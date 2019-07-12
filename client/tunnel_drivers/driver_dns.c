@@ -22,7 +22,7 @@
 
 #define MAX_FIELD_LENGTH 62
 #define MAX_DNS_LENGTH   255
-#define WILDCARD_PREFIX  "dnscat"
+#define WILDCARD_PREFIX  "google"
 
 /* The max length is a little complicated:
  * 255 because that's the max DNS length

